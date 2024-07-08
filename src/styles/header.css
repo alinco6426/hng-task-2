@@ -1,0 +1,167 @@
+header{
+     width: 100%;
+     height: auto;
+     position: relative;
+     margin-bottom: 250px;
+}
+.header-content-wrapper{
+     width: 100%;
+     margin-top: 150px;
+     display: flex;
+     justify-content: space-between;
+}
+.header-content{
+     width: 50%;   
+     margin-top: 150px;
+}
+.header-content .explore{
+     width: fit-content;
+     padding: 15px;
+     border-radius: 30px;
+     background-color: var(--backGround-blue);
+     box-shadow: 2px 2px 2px 2px var(--violet-blue);
+     font-weight: 700;
+     font-size: 16px;
+}
+.header-content .heading{
+     color: var(--black);
+     font-size: 70px;
+     line-height: 100px;
+     margin: 20px 0;
+}
+.header-content .heading span{
+     color: var(--violet-blue);
+}
+
+.header-content .content {
+     color: var(--black);
+     font-size: 18px;
+     font-weight: 600;
+}
+.header-content button {
+     width: 150px;
+     height: 50px;
+     background-color: var(--violet-blue);
+     color: var(--white);
+     border-radius: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-transform: capitalize;
+     margin: 30px 0;
+}
+.header-content button img{
+     width: 20px;
+     margin-right: 10px;
+     filter: invert(1) brightness(2);
+}
+
+.header-illustration-container{
+     width: 50%;
+     height: auto;
+     position: relative;
+}
+.header-illustration-container img{
+     width: 60pc;
+     top: -150px;
+     right: 150px;
+     z-index: 10;
+     position: absolute;
+}
+
+
+/* for tablet  */
+@media screen and (max-width : 1229px) and (min-width : 760px) {
+header{
+     width: 100%;
+     height: auto;
+     margin-bottom: 100px;
+}
+.header-content-wrapper{
+     width: 100%;
+     margin-top: 150px;
+     display: block;
+}
+.header-content .heading{
+     font-size: 50px;
+     line-height: 70px;
+     text-align: center;
+}
+.header-content{
+     width: 100%;   
+     margin-top: 150px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.header-content .content {
+     font-size: 18px;
+     text-align: center;
+}
+
+.header-illustration-container {
+     width: 100%;
+     height: auto;
+     position: relative;
+     display: flex;
+     justify-content: center;
+}
+
+.header-illustration-container img {
+     width: 500px;
+     height: 600px;
+     position: static;
+}
+}
+
+
+
+
+
+/* for mobile  */
+@media screen and (max-width : 759px) {
+header{
+     width: 100%;
+     height: auto;
+     margin-bottom: 100px;
+}
+.header-content-wrapper{
+     width: 100%;
+     margin-top: 150px;
+     display: block;
+}
+.header-content .heading{
+     font-size: 45px;
+     line-height: 60px;
+     text-align: center;
+}
+.header-content{
+     width: 100%;   
+     margin-top: 150px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.header-content .content {
+     font-size: 16px;
+     text-align: center;
+}
+.header-content .content br {
+     display: none;
+}
+.header-illustration-container {
+     width: 100%;
+     height: auto;
+     position: relative;
+     display: flex;
+     justify-content: center;
+}
+
+.header-illustration-container img {
+     width: 300px;
+     height: 400px;
+     position: static;
+}
+}

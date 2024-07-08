@@ -1,0 +1,108 @@
+.cart {
+     width: 100%;
+     padding: 20px;
+     padding-inline: 120px;
+}
+.cart-summary-container{
+     width: auto;
+     height: auto;
+     margin-top: 100px;
+}
+.cart-summary-container .heading{
+     color: var(--black);
+     margin: 20px 0;
+     font-size: 50px;
+}
+.cart-summary-layout{
+     width: 100%;
+     height: auto;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     margin: 20px 0 ;
+     list-style: none;
+}
+.cart-summary-layout li{
+     border: 2px solid;
+     font-weight: 700;
+     color: var(--black);
+     border: none;
+     font-size: 22px;
+}
+.cart-summary-container li:nth-child(2){
+     align-self: center;
+     justify-self: center;
+}
+.cart-summary-container li:last-child{
+     text-align: right;
+     justify-self: self-end;
+}
+
+.carted-product-container{
+     width: 100%;
+     height: auto;
+     margin-top: 100px;
+}
+.cart .order-summary-wrapper{
+     width: 100%;
+     height: auto;
+     display: flex;
+     justify-content: flex-end;
+     margin-top: 50px;
+}
+
+/* for tablet  */
+@media screen and (max-width : 1229px) and (min-width : 760px) {
+.cart{
+     padding-inline: 40px;
+}
+
+.cart-summary-container .heading {
+     color: var(--black);
+     margin: 20px 0;
+     font-size: 50px;
+}
+
+.cart-summary-layout {
+     width: 100%;
+     height: auto;
+}
+.cart-summary-layout li {
+     font-size: 18px;
+}
+.cart .order-summary-wrapper{
+     width: 100%;
+     height: auto;
+     display: block;
+}
+}
+
+
+/* for mobile  */
+@media screen and (max-width : 759px) {
+.cart {
+     width: 100%;
+     padding: 20px;
+     padding-inline: 20px;
+}
+.cart-summary-container{
+     width: auto;
+     height: auto;
+     margin-top: 50px;
+}
+.cart-summary-container .heading{
+     font-size: 30px;
+}
+.cart-summary-layout{
+     display: none;
+}
+.carted-product-container {
+     width: 100%;
+     height: auto;
+     margin-top: 40px;
+}
+.cart .order-summary-wrapper{
+     width: 100%;
+     height: auto;
+     display: block;
+}
+}

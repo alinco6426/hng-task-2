@@ -1,0 +1,91 @@
+.home{
+     background-image: linear-gradient(to bottom ,var(--backGround-blue) 0%, var(--white) 35%);
+     padding: 20px 0;
+     padding-inline: 150px;
+}
+.products-container-wrapper,
+.new-arrival-container-wrapper{
+     width: 100%;
+     height: auto;
+     margin-top: 400px;
+
+}
+.products-container-wrapper h1,
+.new-arrival-container-wrapper h1{
+     color: var(--black);
+     font-size: 70px;
+     text-align: center;
+     margin: 30px 0;
+}
+.products-container  , .new-arrival-container{
+     width: 100%;
+     height: auto;
+     display: grid;
+     grid-template-columns: repeat(3 , 1fr);
+     grid-gap: 40px;
+}
+/* for tablet  */
+
+@media screen and (max-width : 1229px) and (min-width : 760px) {
+     .home{
+          padding-inline: 40px;
+     }
+.products-container-wrapper,
+.new-arrival-container-wrapper{
+     width: 100%;
+     height: auto;
+     margin-top: 150px;
+
+}
+.products-container-wrapper h1,
+.new-arrival-container-wrapper h1{
+     font-size: 50px;
+     text-align: center;
+     margin: 20px 0;
+}
+.products-container  , .new-arrival-container{
+     width: 100%;
+     height: auto;
+     display: grid;
+     grid-template-columns: repeat(2 , 1fr);
+     grid-gap: 30px;
+}
+}
+
+
+/* for mobile  */
+@media screen and (max-width : 759px) {
+     .home {
+          padding-inline: 20px;
+     }
+     .products-container-wrapper{
+          margin-top : 100px;
+     }
+     .products-container{
+          display: block;
+     }
+     .products-container .product:nth-child(3),
+     .products-container .product:nth-child(4),
+     .products-container .product:nth-child(5) {
+          display: none;
+     }
+     .products-container-wrapper h1,
+    .new-arrival-container-wrapper h1{
+     color: var(--black);
+     font-size: 40px;
+     text-align: center;
+     margin: 30px 0;
+     }
+    .new-arrival-container-wrapper{
+      width: 100%;
+      height:auto;
+      overflow: hidden;
+      margin-top: 100px;
+    }
+    .new-arrival-container {
+       width: auto;
+       height : auto;
+       overflow: scroll;
+    }
+
+}
