@@ -238,10 +238,10 @@ footer .footer-details-container{
 .useful-links-container ul{
      width: 100%;
      list-style: none;
-     border-bottom : 2px solid var(--black);
+     border-bottom : 1.5px solid var(--grey);
      background-image: url(../assets/icons/noun-arrow-down-2424963.svg);
      background-repeat: no-repeat;
-     background-size: 20px;
+     background-size: 10px;
      background-position: right 20px;
 }
 .useful-links-container ul  li:not(:first-child) {
