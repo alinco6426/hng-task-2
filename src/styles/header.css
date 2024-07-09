@@ -19,14 +19,15 @@ header{
      padding: 15px;
      border-radius: 30px;
      background-color: var(--backGround-blue);
-     box-shadow: 2px 2px 2px 2px var(--violet-blue);
+     box-shadow: 1px 1px 1px 1.5px var(--violet-blue);
      font-weight: 700;
      font-size: 16px;
 }
 .header-content .heading{
      color: var(--black);
      font-size: 70px;
-     line-height: 100px;
+     line-height: 100px; 
+     font-weight: 800;
      margin: 20px 0;
 }
 .header-content .heading span{
@@ -59,12 +60,10 @@ header{
 .header-illustration-container{
      width: 50%;
      height: auto;
-     position: relative;
 }
 .header-illustration-container img{
-     width: 60pc;
-     top: -150px;
-     right: 150px;
+     width: 40pc;
+     top: 50px;
      z-index: 10;
      position: absolute;
 }
@@ -109,8 +108,8 @@ header{
 }
 
 .header-illustration-container img {
-     width: 500px;
-     height: 600px;
+     width: 450px;
+     height: 650px;
      position: static;
 }
 }

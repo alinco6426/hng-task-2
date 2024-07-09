@@ -1,7 +1,7 @@
 .home{
      background-image: linear-gradient(to bottom ,var(--backGround-blue) 0%, var(--white) 35%);
      padding: 20px 0;
-     padding-inline: 150px;
+     padding-inline: 120px;
 }
 .products-container-wrapper,
 .new-arrival-container-wrapper{
@@ -22,7 +22,7 @@
      height: auto;
      display: grid;
      grid-template-columns: repeat(3 , 1fr);
-     grid-gap: 40px;
+     grid-gap: 20px;
 }
 /* for tablet  */
 
@@ -86,6 +86,9 @@
        width: auto;
        height : auto;
        overflow: scroll;
+    }
+    .new-arrival-container .product{
+       width: 350px;
     }
 
 }

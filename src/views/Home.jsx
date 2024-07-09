@@ -7,9 +7,10 @@ import imagePhone from "../assets/images/image-phone.png";
 import imageHeadphone from "../assets/images/image-headphone.png";
 import imageEarphone from "../assets/images/image-earphone.png";
 import imageEarbud from "../assets/images/image-earbud.png";
-import imageMouse from "../assets/images/image-mouse-removebg-preview.png";
+import imageMouse from "../assets/images/image-mouse.png";
 
 import "../styles/home.css";
+
 
 
 

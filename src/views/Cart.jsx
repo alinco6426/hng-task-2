@@ -23,10 +23,6 @@ const cart = [
 
 
 export default function Cart (){
-     let subTotal = 0
-     const getSubTotal = cart.map(product => {
-          return subTotal += product.price;
-     });
 
      return (
           <main className="cart">

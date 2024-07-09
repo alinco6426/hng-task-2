@@ -158,13 +158,7 @@ nav{
      display: block;
 }
 .search-bar-container {
-     width: auto;
-     height: auto;
-     display: flex;
-     justify-content: space-between;
-     background-color: var(--black);
-     border-radius: 15px;
-     padding-inline: 10px;
+     display: none;
 }
 .nav-button {
      display: block;
