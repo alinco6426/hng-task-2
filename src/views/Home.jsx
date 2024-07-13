@@ -9,6 +9,8 @@ import imageEarphone from "../assets/images/image-earphone.png";
 import imageEarbud from "../assets/images/image-earbud.png";
 import imageMouse from "../assets/images/image-mouse.png";
 
+// import R
+
 import "../styles/home.css";
 
 

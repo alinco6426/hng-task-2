@@ -29,7 +29,8 @@ return (
         <NavLink to="/">Home</NavLink>
         <a href="#">Categories</a>
         <NavLink to="/cart">Cart</NavLink>
-        <a href="#">Contact Us</a>
+        <NavLink to="/right">Contact Us</NavLink>
+        {/* <a href="#">Contact Us</a> */}
       </ul>
 
       <div className="search-bar-container">
