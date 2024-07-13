@@ -34,7 +34,15 @@ function Right() {
       <h1>Products</h1>
       <ul>
         {products.map((product) => (
-          <li key={product.id}>{product.name}</li>
+          <li key={product.id}>{product.name}
+          <h3>{product.description}</h3>
+          {/* <img src={product.photos[0].url} alt="" /> */}
+          {
+               product.photos.map((image) => (
+                    <img key={image.url} src={image.url} alt="" />
+               ))
+          }
+          </li>
         ))}
       </ul>
     </div>
