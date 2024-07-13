@@ -8,7 +8,7 @@ function Right() {
     useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('/api/products', {
+        const response = await axios.get('https://timbu-get-all-products.reavdev.workers.dev/', {
           params: {
             organization_id: '914a1ea0a41f41538a1a489f628d27de',
             reverse_sort: false,
@@ -20,6 +20,7 @@ function Right() {
         });
 
         setProducts(response.data.items);
+        console.log(response.data.items)
       } catch (error) {
         console.error('Error fetching products:', error.message, error);
         setError(error.message);
@@ -39,7 +40,7 @@ function Right() {
           {/* <img src={product.photos[0].url} alt="" /> */}
           {
                product.photos.map((image) => (
-                    <img key={image.url} src={image.url} alt="" />
+                    <img key={image.url} src={`https://api.timbu.cloud/images/${image.url}`} alt="" />
                ))
           }
           </li>
