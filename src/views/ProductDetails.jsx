@@ -7,7 +7,7 @@ import  "../styles/product-details.css"
 
 function ProductDetails() {
   const { slug_name } = useParams();
-  const { findProduct, fetchProducts, products, error } = useProductStore();
+  const { findProduct, fetchProducts, products, error , addProductToCart } = useProductStore();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
