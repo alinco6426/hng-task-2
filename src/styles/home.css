@@ -24,6 +24,28 @@
      grid-template-columns: repeat(3 , 1fr);
      grid-gap: 20px;
 }
+.control-button-container {
+     width: fit-content;
+     height: auto;
+     margin-inline: auto;
+     margin-top: 50px ;
+     display: flex;
+     align-items: center;
+}
+.control-button-container  button {
+     width: 120px;
+     height: 40px;
+     background-color: var(--violet-blue);
+     color: var(--white);
+     text-transform: capitalize;
+     border-radius: 5px;
+}
+.control-button-container p{
+     color: var(--black);
+     font-weight: 600;
+     font-size: 20px;
+     margin-inline: 15px;
+}
 /* for tablet  */
 
 @media screen and (max-width : 1229px) and (min-width : 760px) {
