@@ -23,7 +23,7 @@ function Product ({product}){
           <h5 className="product-name">{product.name}</h5>
           <h2 className="product-price"># {product.current_price[0].NGN[0].toLocaleString()}</h2>
           <button className="add-to-cart-button" onClick={() => addProductToCart(product.unique_id)}>+</button>
-          <button onClick={() => navigate(`/product-details/${product.url_slug}`)}>view product</button>
+          <button className="view-product-btn" onClick={() => navigate(`/product-details/${product.url_slug}`)}>view product</button>
         </div>
       </section>
      )
