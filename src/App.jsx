@@ -1,9 +1,11 @@
 import Home from './views/Home';
 import Cart from './views/Cart';
 import CheckOut from './views/CheckOut';
-// import Fetch 
+import ProductDetails from './views/ProductDetails';
 import { Routes , Route } from 'react-router-dom';
-// import Right from './views/Right';
+import Cartt from './views/Cartt';
+
+
 
 import Right from './views/Right';
 import './App.css'
@@ -11,6 +13,7 @@ import './App.css'
 
 
 function App() {
+
    return (
     <>
     <Routes>
@@ -18,7 +21,8 @@ function App() {
       <Route path='/cart' element={<Cart/>}></Route>
       <Route path='/checkout' element={<CheckOut/>}></Route>
       <Route path='/right' element={<Right/>}></Route>
-      {/* <Route path='/fetchProduct' element={<FetchProducts/>}></Route> */}
+      <Route path='/cartt' element={<Cartt/>}></Route>
+      <Route path='/product-details/:slug_name' element={<ProductDetails/>}></Route>
     </Routes>
     </>
   )

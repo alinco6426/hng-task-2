@@ -5,25 +5,29 @@ import OrderSummary from "../components/OrderSummary";
 // import Feth 
 import imagePhone from "../assets/images/image-phone.png";
 
+import useProductStore from "../Store/ProductStore";
+
+
 import "../styles/cart.css"
 
-const cart = [
-  {
-    name : "redmi note 11 pro",
-    price : 45000,
-    image : imagePhone,
-    quantity : 1
-  },
-  { 
-    name : "redmi case",
-    price : 25000,
-    image : imagePhone,
-    quantity : 1
-  },
-]
+// const cart = [
+//   {
+//     name : "redmi note 11 pro",
+//     price : 45000,
+//     image : imagePhone,
+//     quantity : 1
+//   },
+//   { 
+//     name : "redmi case",
+//     price : 25000,
+//     image : imagePhone,
+//     quantity : 1
+//   },
+// ]
 
 
 export default function Cart (){
+     const {cart  , clearCart} = useProductStore();
 
      return (
           <main className="cart">
@@ -40,6 +44,7 @@ export default function Cart (){
                               <CartedProduct key={product.name} product={product} />
                          ))}
                     </div>
+                    <button type="button" onClick={() => clearCart()}>Clear Cart</button>
                </section>
                <section className="order-summary-wrapper">
                     <OrderSummary ></OrderSummary>

@@ -1,53 +1,54 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import useProductStore from '../Store/ProductStore';
+import { useNavigate } from 'react-router-dom';
 
 function Right() {
+  const { products, fetchProducts, error , addProductToCart , controlQuantity , fetchNextPage , fetchPreviousPage} = useProductStore();
+  const navigate = useNavigate()
 
-  const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('https://timbu-get-all-products.reavdev.workers.dev/', {
-          params: {
-            organization_id: '914a1ea0a41f41538a1a489f628d27de',
-            reverse_sort: false,
-            page: 1,
-            size: 10,
-            Appid: '0P3W7TBADIH3K9R',
-            Apikey: '616ca87d3edb4e54bc48ed444168c15f20240712185722233413',
-          },
-        });
-
-        setProducts(response.data.items);
-        console.log(response.data.items)
-      } catch (error) {
-        console.error('Error fetching products:', error.message, error);
-        setError(error.message);
-      }
-    };
-
+  useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [fetchProducts]); 
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div>
       <h1>Products</h1>
       <ul>
         {products.map((product) => (
-          <li key={product.id}>{product.name}
-          <h3>{product.description}</h3>
-          {/* <img src={product.photos[0].url} alt="" /> */}
-          {
-               product.photos.map((image) => (
-                    <img key={image.url} src={`https://api.timbu.cloud/images/${image.url}`} alt="" />
-               ))
-          }
+          <li key={product.id}>
+            <h4>{product.name}</h4>
+            <h3>{product.description}</h3>
+            {product.photos.map((image) => (
+              <img key={image.url} src={`https://api.timbu.cloud/images/${image.url}`} alt="" />
+            ))}
+            <button type='button'></button>
+            <br />
+            <button onClick={() => navigate(`/product-details/${product.url_slug}`)}>view product</button>
+            <br />
+            <br />
+            <button type='button' onClick={() => addProductToCart(product.unique_id)}>add to cart</button>
+               <br />
+            <br />
+            <button type='button' onClick={() => controlQuantity(product.unique_id ,"inc")}>inc</button>
+               <br />
+            <br />
+            <button type='button' onClick={() => controlQuantity(product.unique_id)}>dsc</button>
           </li>
+         
         ))}
       </ul>
+       <button type='button' onClick={() => fetchNextPage()}>next page</button>
+          <br />
+            <br />
+             <button type='button' onClick={() => fetchPreviousPage()}>previous page</button>
+               <br />
+            <br />
     </div>
   );
-};
+}
 
-export default Right
+export default Right;

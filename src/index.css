@@ -5,6 +5,7 @@
   --black : rgb(0,0,0);
   --white : rgb(255, 255, 255);
   --grey : rgba(200, 200, 200, 0.92);
+  --orange : rgba(181, 101, 26, 0.92);
 }
 body {
     font-family: "Manrope", sans-serif;
